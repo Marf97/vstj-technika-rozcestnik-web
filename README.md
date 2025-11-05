@@ -461,8 +461,8 @@ If you add these files, restart your editor TS server.
 
 ## Deployment notes
 
-- Output is static (Vite build). Upload `dist/` to static host (Netlify, Vercel, S3, GitHub Pages).
-- SPA routes require redirect/fallback to `index.html`. Configure host accordingly (Netlify `_redirects`, Vercel settings, etc.)
+- Output is static (Vite build). Upload `dist/` to our webhosting.
+- SPA routes require redirect/fallback to `index.html`. Configure host accordingly.
 
 ---
 
