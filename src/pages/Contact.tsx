@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown';
-import contact from '../content/Contact.md?raw';
+import contact from '../content/Contact.md';
 
 export default function Contact() {
   return (

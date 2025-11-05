@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown';
-import about from '../content/About.md?raw';
+import about from '../content/About.md';
 
 export default function About() {
   return (
