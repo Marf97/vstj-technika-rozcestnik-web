@@ -4,8 +4,8 @@ import Tile from './Tile';
 
 export default function TilesGrid() {
   const tiles = [
-    { title: 'Tenis', href: 'https://tenis.technika-praha.cz' },
-    { title: 'Jachting', href: 'https://jachting.technika-praha.cz' },
+    { title: 'Tenis', href: 'https://tenis.technika-praha.cz', pictureUrl: '/tennis.png' },
+    { title: 'Jachting', href: 'https://jachting.technika-praha.cz', pictureUrl: '/sailing-boat.png' },
 ];
   
   const CARD_W = 300;
@@ -24,8 +24,8 @@ export default function TilesGrid() {
         }}
     >
       
-      <Typography variant="h2" sx={{ fontWeight: 600, textAlign: 'center', mt: 2, mb: 10 }}>
-        Toto jsou naše oddíly
+      <Typography variant="h2" sx={{ fontWeight: 600, textAlign: 'center', mt: 2 }}>
+        Naše oddíly
       </Typography>
 
       <Box sx={{
@@ -33,11 +33,11 @@ export default function TilesGrid() {
         flexWrap: 'wrap',
         gap: 4,
         justifyContent: 'center',
-        alignItems: 'flex-start',
+        alignItems: 'center',
       }}>
         {tiles.map((t) => (
           <Box key={t.title} sx={{ width: CARD_W }}>
-              <Tile title={t.title} href={t.href} />
+              <Tile title={t.title} href={t.href} pictureUrl={t.pictureUrl} />
           </Box>
         ))}
       </Box>
