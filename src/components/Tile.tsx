@@ -20,7 +20,7 @@ export default function Tile({ title, href, pictureUrl }: TileProps) {
                     borderRadius: 3,
                     width: '100%',
                     maxWidth: 300,
-                    minWidth: 300,
+                    minWidth: 0,
                     mx: 'auto',
                     /* use theme background with 0.4 opacity */
                     backgroundColor: (theme) => alpha(theme.palette.primary.main, 0.6),

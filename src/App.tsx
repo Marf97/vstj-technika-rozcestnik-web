@@ -21,19 +21,20 @@ export default function App() {
         <CssBaseline />
         <Box
           sx={{
-            width: { xs: '92%', sm: '85%', md: '75%' }, // mobile -> tablet -> desktop
-            maxWidth: 1200,                             // optional cap
+            width: { xs: 'calc(100% - 2px)', sm: '85%', md: '75%' },
+            maxWidth: 1200,
             mx: 'auto',
-            px: 2,
+            overflowX: 'clip',
+            px: { xs: 1, sm: 2 },
             display: 'flex',
             flexDirection: 'column',
             gap: 4,
             alignItems: 'center',
           }}
         >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 2, mb: 5 }}>
-          <Box component="img" src="/logo.png" alt="logo" />
-          <Typography variant="h1" sx={{ fontWeight: 600, textAlign: 'left', color: 'primary.main' }}>
+          <Box sx={{ display: 'flex', flexWrap: { xs: 'wrap', sm: 'nowrap' }, justifyContent: 'center', alignItems: 'center', gap: 2, mt: 2, mb: 5, width: '100%' }}>
+          <Box component="img" src="/logo.png" alt="logo" sx={{ maxWidth: { xs: 96, sm: 'none' }, height: 'auto' }} />
+          <Typography variant="h1" sx={{ fontWeight: 600, textAlign: { xs: 'center', sm: 'left' }, color: 'primary.main', fontSize: { xs: '2.5rem', sm: '4rem', lg: '6rem' } }}>
             VŠTJ Technika Praha
           </Typography>
         </Box>
@@ -58,7 +59,7 @@ Jednota sdružuje a provozuje řadu sportovních oddílů a organizuje účast s
       </Button>
 
         <Box sx={{ minHeight: '50dvh', display: 'flex', flexDirection: 'column' }}>
-          <Box component="main" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', py: 6, px: 4 }}>
+          <Box component="main" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', py: 6, px: { xs: 0, sm: 4 } }}>
             <TilesGrid />
           </Box>
         </Box>

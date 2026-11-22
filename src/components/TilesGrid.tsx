@@ -6,6 +6,7 @@ export default function TilesGrid() {
   const tiles = [
     { title: 'Tenis', href: 'https://tenis.technika-praha.cz', pictureUrl: '/tennis.png' },
     { title: 'Jachting', href: 'https://jachting.technika-praha.cz', pictureUrl: '/sailing-boat.png' },
+    { title: 'Lukostřelba', href: 'https://www.cvut-archery.cz', pictureUrl: '/archery.svg' },
 ];
   
   const CARD_W = 300;
@@ -36,7 +37,7 @@ export default function TilesGrid() {
         alignItems: 'center',
       }}>
         {tiles.map((t) => (
-          <Box key={t.title} sx={{ width: CARD_W }}>
+          <Box key={t.title} sx={{ width: '100%', maxWidth: CARD_W }}>
               <Tile title={t.title} href={t.href} pictureUrl={t.pictureUrl} />
           </Box>
         ))}
